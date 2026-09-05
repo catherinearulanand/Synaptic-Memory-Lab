@@ -1,0 +1,30 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.chip[data-tone='accent'] {
+  background: rgba(47, 93, 80, 0.1);
+  border-color: rgba(47, 93, 80, 0.25);
+  color: var(--accent);
+}
+
+.chip[data-tone='terracotta'] {
+  background: rgba(166, 93, 63, 0.1);
+  border-color: rgba(166, 93, 63, 0.25);
+  color: var(--terracotta);
+}
+
+.chip[data-tone='success'] {
+  background: rgba(61, 107, 79, 0.1);
+  border-color: rgba(61, 107, 79, 0.25);
+  color: var(--success);
+}

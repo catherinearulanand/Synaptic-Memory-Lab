@@ -1,0 +1,118 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.svgWrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.edge {
+  stroke: var(--accent);
+  fill: none;
+  transition: opacity var(--motion-medium) var(--ease-out), stroke-width var(--motion-medium) var(--ease-out);
+}
+
+.node {
+  transition: transform var(--motion-medium) var(--ease-out);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.nodeCircle {
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 1.5;
+  transition: stroke var(--motion-fast) var(--ease-out);
+}
+
+.nodeCircle[data-role='query'] {
+  stroke: var(--accent-sand);
+  stroke-width: 2.5;
+}
+
+.nodeCircle[data-role='active'] {
+  stroke: var(--accent);
+  stroke-width: 2.5;
+}
+
+.halo {
+  fill: var(--accent);
+  transition: opacity var(--motion-medium) var(--ease-out), transform var(--motion-medium) var(--ease-out);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.nodeLabel {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  fill: var(--text-primary);
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendSwatch {
+  width: 14px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+
+.tableToggle {
+  align-self: flex-start;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.table caption {
+  text-align: left;
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  text-align: center;
+}
+
+.table th {
+  background: var(--surface-secondary);
+  font-weight: 500;
+}
