@@ -123,6 +123,18 @@ See [`docs/BLOG.pdf`](docs/BLOG.pdf) for how these connect to the claim this lab
 
 See [`docs/AI_ASSISTANCE_DISCLOSURE.md`](docs/AI_ASSISTANCE_DISCLOSURE.md).
 
-## License
+## Licenses & third-party assets
 
-MIT — see [`LICENSE`](LICENSE).
+| Component | Source | License |
+|-----------|--------|---------|
+| Project source code (this repository) | Original | MIT — see [`LICENSE`](LICENSE) |
+| Interactive artifact / demo | This repository + Vercel deployment | MIT |
+| Blog and one-page summary | Original (`docs/BLOG.md`, `docs/ONE_PAGE_SUMMARY.md`) | MIT |
+| Fonts — JetBrains Mono | [`@fontsource/jetbrains-mono`](https://fontsource.org/fonts/jetbrains-mono) | OFL-1.1 |
+| Fonts — Montserrat | [`@fontsource/montserrat`](https://fontsource.org/fonts/montserrat) | OFL-1.1 |
+| React, React DOM, Vite, TypeScript, Vitest | npm packages | MIT |
+| Reference architecture (BDH) | [pathwaycom/bdh](https://github.com/pathwaycom/bdh) | MIT |
+| Data / model weights | None used — all dynamics are a small original toy engine | N/A |
+| Graphics / icons | Original SVG motif in the landing page | MIT |
+
+No external datasets, pretrained weights, or proprietary assets are included or required to run the project.
