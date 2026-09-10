@@ -59,7 +59,7 @@ See the in-app "Where this appears in BDH" module for the toy equations, what th
 | Public source code repository | [github.com/catherinearulanand/Synaptic-Memory-Lab](https://github.com/catherinearulanand/Synaptic-Memory-Lab) |
 | Blog: research write-up connecting this project to BDH, BDH-CQ, and the wider fixed-size-memory literature | [`docs/BLOG.pdf`](docs/BLOG.pdf) ([source](docs/BLOG.md)) |
 | One-page concept summary | [`docs/ONE_PAGE_SUMMARY.pdf`](docs/ONE_PAGE_SUMMARY.pdf) ([source](docs/ONE_PAGE_SUMMARY.md)) |
-| AI assistance, code, data, asset & license disclosure | [`docs/AI_ASSISTANCE_DISCLOSURE.md`](docs/AI_ASSISTANCE_DISCLOSURE.md) and [Source and license record](#source-and-license-record) below |
+| AI assistance, code, data, asset & license disclosure | [`docs/AI_ASSISTANCE_DISCLOSURE.md`](docs/AI_ASSISTANCE_DISCLOSURE.md) and [Licenses & third-party assets](#licenses--third-party-assets) below |
 | License | [`LICENSE`](LICENSE) (MIT) |
 
 ### Project layout
@@ -102,22 +102,6 @@ This is a small, honest toy model, not a port of BDH's actual equations. See the
 - Behrouz, Zhong & Mirrokni, "Titans: Learning to Memorize at Test Time" (2024) — [arXiv:2501.00663](https://arxiv.org/abs/2501.00663)
 
 See [`docs/BLOG.pdf`](docs/BLOG.pdf) for how these connect to the claim this lab teaches, with citations beside each technical claim.
-
-## Source and license record
-
-**Code.** All application code (`src/`, `scripts/`, `tests/`) is original, written for this project, and licensed under this repository's MIT license.
-
-**Data.** The three toy tasks and their demonstration pools (`src/lib/dynamics/tasks.ts`) are synthetic and original to this project — no external dataset is used anywhere in the app.
-
-**Model weights.** None. The dynamics engine and the baseline are both rule-based (Hebbian update / fixed similarity lookup), not trained — there are no weights to source.
-
-**Graphics.** The synaptic-graph visualization and the landing-page motif are inline SVG, authored for this project. The favicon (`public/favicon.svg`) is likewise original.
-
-**Fonts.** [Montserrat](https://github.com/JulietaUla/Montserrat) and [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono), both licensed under the [SIL Open Font License 1.1](https://scripts.sil.org/OFL), bundled via [`@fontsource`](https://fontsource.org/) (`node_modules/@fontsource/*/LICENSE`).
-
-**Reused components (npm dependencies):** React & React DOM (MIT), Vite & `@vitejs/plugin-react` (MIT), TypeScript (Apache-2.0), Vitest (MIT), `tsx` (MIT), `oxlint` (MIT). See `package.json` for exact versions; each package's own license file governs its terms.
-
-**Reference architecture.** Dragon Hatchling (BDH) and its [official implementation](https://github.com/pathwaycom/bdh) (MIT-licensed) are cited and described, not incorporated as code — see [Primary sources](#primary-sources).
 
 ## AI assistance disclosure
 
