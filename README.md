@@ -8,6 +8,8 @@ An interactive educational lab that teaches one falsifiable claim:
 
 Add a handful of demonstrations to a small, fully transparent 8×8 synapse matrix, then watch it answer a query through repeated latent refinement — compared, side by side, against a baseline whose memory grows with every example it's shown. Reference architecture: Dragon Hatchling (BDH).
 
+**Live demo:** [synaptic-memory-lab-rust.vercel.app](https://synaptic-memory-lab-rust.vercel.app) — public, no sign-in required.
+
 ## Who this is for
 
 **Audience:** data scientists and ML practitioners with a working understanding of attention and Transformers, but no assumed familiarity with BDH, Hebbian learning, or associative memory specifically.
@@ -53,14 +55,12 @@ See the in-app "Where this appears in BDH" module for the toy equations, what th
 
 | What | Where |
 |---|---|
-| Interactive artifact (this repo, runs locally — see [Running it](#running-it)) | this repository |
+| Public, no-sign-in artifact URL | [synaptic-memory-lab-rust.vercel.app](https://synaptic-memory-lab-rust.vercel.app) |
+| Public source code repository | [github.com/catherinearulanand/Synaptic-Memory-Lab](https://github.com/catherinearulanand/Synaptic-Memory-Lab) |
 | Blog: research write-up connecting this project to BDH, BDH-CQ, and the wider fixed-size-memory literature | [`docs/BLOG.pdf`](docs/BLOG.pdf) ([source](docs/BLOG.md)) |
 | One-page concept summary | [`docs/ONE_PAGE_SUMMARY.pdf`](docs/ONE_PAGE_SUMMARY.pdf) ([source](docs/ONE_PAGE_SUMMARY.md)) |
-| AI assistance disclosure | [`docs/AI_ASSISTANCE_DISCLOSURE.md`](docs/AI_ASSISTANCE_DISCLOSURE.md) |
-| Source code repository | this repository |
+| AI assistance, code, data, asset & license disclosure | [`docs/AI_ASSISTANCE_DISCLOSURE.md`](docs/AI_ASSISTANCE_DISCLOSURE.md) and [Source and license record](#source-and-license-record) below |
 | License | [`LICENSE`](LICENSE) (MIT) |
-
-A public, no-sign-in demo URL is not yet deployed — see [Deployment](#deployment).
 
 ### Project layout
 
@@ -82,7 +82,7 @@ This is a small, honest toy model, not a port of BDH's actual equations. See the
 
 ## Deployment
 
-`npm run build` produces a static `dist/` folder with no server-side dependency — deployable to any static host (Vercel, Netlify, GitHub Pages, etc.). Deploying it to a public, no-sign-in URL is the maintainer's next step; it is not performed by this codebase.
+`npm run build` produces a static `dist/` folder with no server-side dependency. It's deployed on Vercel at [synaptic-memory-lab-rust.vercel.app](https://synaptic-memory-lab-rust.vercel.app), connected directly to this repository's `main` branch — every push redeploys automatically. No environment variables or server-side config are required.
 
 ## Regenerating the PDFs
 
@@ -102,6 +102,22 @@ This is a small, honest toy model, not a port of BDH's actual equations. See the
 - Behrouz, Zhong & Mirrokni, "Titans: Learning to Memorize at Test Time" (2024) — [arXiv:2501.00663](https://arxiv.org/abs/2501.00663)
 
 See [`docs/BLOG.pdf`](docs/BLOG.pdf) for how these connect to the claim this lab teaches, with citations beside each technical claim.
+
+## Source and license record
+
+**Code.** All application code (`src/`, `scripts/`, `tests/`) is original, written for this project, and licensed under this repository's MIT license.
+
+**Data.** The three toy tasks and their demonstration pools (`src/lib/dynamics/tasks.ts`) are synthetic and original to this project — no external dataset is used anywhere in the app.
+
+**Model weights.** None. The dynamics engine and the baseline are both rule-based (Hebbian update / fixed similarity lookup), not trained — there are no weights to source.
+
+**Graphics.** The synaptic-graph visualization and the landing-page motif are inline SVG, authored for this project. The favicon (`public/favicon.svg`) is likewise original.
+
+**Fonts.** [Montserrat](https://github.com/JulietaUla/Montserrat) and [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono), both licensed under the [SIL Open Font License 1.1](https://scripts.sil.org/OFL), bundled via [`@fontsource`](https://fontsource.org/) (`node_modules/@fontsource/*/LICENSE`).
+
+**Reused components (npm dependencies):** React & React DOM (MIT), Vite & `@vitejs/plugin-react` (MIT), TypeScript (Apache-2.0), Vitest (MIT), `tsx` (MIT), `oxlint` (MIT). See `package.json` for exact versions; each package's own license file governs its terms.
+
+**Reference architecture.** Dragon Hatchling (BDH) and its [official implementation](https://github.com/pathwaycom/bdh) (MIT-licensed) are cited and described, not incorporated as code — see [Primary sources](#primary-sources).
 
 ## AI assistance disclosure
 
